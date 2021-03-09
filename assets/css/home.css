@@ -1,0 +1,289 @@
+@charset "UTF-8";
+/*******************
+* HOME Styles
+*******************/
+h1 {
+  font-weight: 600;
+  font-size: 12vw;
+  margin: 0 auto 4rem;
+  text-align: center;
+  line-height: 1.3em;
+}
+
+main {
+  position: relative;
+  font-size: 4.5vw;
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+main::after {
+  content: "";
+  background-size: cover;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+  border-radius: 20px;
+  background: white;
+}
+
+.main__home a {
+  color: #efefef;
+}
+
+.main__home::after {
+  opacity: 0.3;
+}
+
+.main__loginButtons {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 auto;
+}
+.main__loginButtons a {
+  padding: 1rem;
+}
+
+label {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+form {
+  text-align: left;
+  margin-bottom: 5.5rem;
+}
+form p {
+  margin: 0.9rem 0 4.5rem 0;
+}
+form input {
+  width: 100%;
+  border: 0;
+  outline: none;
+  color: #333333;
+  border-bottom: 2px solid #e6e6e6;
+  padding: 0.8em 0.8em 0.5em 0.4em;
+  margin: 0;
+  font-size: 1em;
+}
+form input:-webkit-autofill,
+form input:-webkit-autofill:hover,
+form input:-webkit-autofill:focus,
+form input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 150px 0 white inset !important;
+  box-shadow: 0 0 150px 0 white inset !important;
+}
+
+#signin a {
+  display: block;
+  text-align: right;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #b6b6b6;
+  opacity: 1;
+  /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #b6b6b6;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #b6b6b6;
+}
+
+.form__borderEffect {
+  display: block;
+  transition: all 400ms;
+  width: 0;
+  height: 2px;
+  background-color: #7F7F7F;
+  position: relative;
+  bottom: 2px;
+  margin-bottom: 25px;
+}
+
+.form__borderEffect:last-child {
+  margin-bottom: auto;
+}
+
+input:focus + .form__borderEffect,
+input:focus + .form__borderEffect {
+  width: 100%;
+}
+
+.form__buttonContainer {
+  overflow: hidden;
+  margin-top: 2rem;
+  border-radius: 2.5rem;
+}
+
+button[type=submit] {
+  width: 100%;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  font-size: 1.3em;
+  padding: 1.5rem;
+  color: white;
+  background: transparent;
+  z-index: 1;
+}
+
+button[type=submit]::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 200%;
+  z-index: -1;
+  transition: margin 0.2s ease-in-out;
+  background: #a64bf4;
+  background: linear-gradient(to right, #00dbde, #fc00ff);
+  background: -webkit-linear-gradient(to right, #00dbde, #fc00ff);
+}
+
+.form__buttonContainer:hover button[type=submit]::before {
+  margin-left: -100%;
+}
+
+.form__buttonContainer::after {
+  content: attr(data-err);
+  display: block;
+  color: #D85656;
+  position: absolute;
+}
+
+/******* PASSWORD CHECK ******/
+/* The message box is shown when the user clicks on the password field */
+.form__passwordHelper,
+.form__confirmPasswordHelper {
+  position: absolute;
+  display: none;
+  background: white;
+  z-index: 3;
+  border: 1px solid #7F7F7F;
+  border-radius: 20px;
+  padding: 1rem 3rem;
+  left: -5%;
+  width: 110%;
+  transition: opacity 0.2s linear;
+  font-size: 1.1em;
+  opacity: 0;
+}
+.form__passwordHelper h3,
+.form__confirmPasswordHelper h3 {
+  font-size: 1em;
+}
+.form__passwordHelper p,
+.form__confirmPasswordHelper p {
+  padding: 1rem 0 1rem 3.5rem;
+  font-size: 0.8em;
+  margin-bottom: 2.5rem;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+  color: green;
+}
+
+.valid:before {
+  position: relative;
+  left: -3.5rem;
+  content: "✔";
+}
+
+/* Add a red text color and an "x" when the requirements are wrong */
+.invalid {
+  color: red;
+}
+
+.invalid:before {
+  position: relative;
+  left: -3.5rem;
+  content: "✖";
+}
+
+.form__errorMessage {
+  color: #D85656;
+  text-align: left;
+}
+
+.form__successMessage {
+  color: darkgreen;
+  text-align: left;
+}
+
+@media all and (min-width: 500px) {
+  h1 {
+    font-size: 5vw;
+  }
+
+  main {
+    font-size: 2.75vw;
+  }
+}
+@media all and (min-width: 768px) {
+  .content__container {
+    margin-top: 10rem;
+  }
+
+  h1 {
+    font-size: 6vw;
+  }
+
+  main {
+    font-size: 2vw;
+    padding: 2rem;
+  }
+}
+@media all and (min-width: 1024px) {
+  .content__container {
+    max-width: 900px;
+  }
+
+  h1 {
+    font-size: 5vw;
+  }
+
+  main {
+    font-size: 1.5vw;
+    padding: 4rem;
+    width: 60%;
+  }
+}
+@media all and (min-width: 1366px) {
+  h1 {
+    font-size: 3.5vw;
+  }
+
+  main {
+    font-size: 1.3vw;
+  }
+}
+@media all and (min-width: 1536px) {
+  .content__container {
+    margin-top: 7rem;
+  }
+
+  h1 {
+    font-size: 6rem;
+  }
+
+  main {
+    font-size: 1.7rem;
+  }
+}
+
+/*# sourceMappingURL=home.css.map */

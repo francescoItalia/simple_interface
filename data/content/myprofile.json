@@ -1,0 +1,6 @@
+{
+    "head.title": "My Profile | Site",
+    "head.description": "Description | Site",
+    "head.styles": "../assets/css/myprofile.css",
+    "body.h1": "Welcome To Your Profile Page"
+}

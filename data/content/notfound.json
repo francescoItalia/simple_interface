@@ -1,0 +1,6 @@
+{
+    "head.title": "Not Found | Site",
+    "head.description": "Description | Site",
+    "head.styles": "../assets/css/notFound.css",
+    "body.h1": "Ooooops.. Not Found"
+}

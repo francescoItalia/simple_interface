@@ -1,0 +1,32 @@
+/*******************
+* Profile Styles
+*******************/
+/*** HEADER ***/
+header {
+  text-align: left;
+}
+
+/*** BODY ***/
+body {
+  background: none;
+}
+
+.content__container {
+  align-items: flex-start;
+}
+
+.btn {
+  padding: 0.2rem 2rem;
+  border-radius: 1.5rem;
+  width: max-content;
+  background-color: #ff4d4d;
+  color: white;
+  box-shadow: 1px 2px #888888;
+}
+
+.btn:active:active {
+  transform: translateY(0.15rem);
+  box-shadow: none;
+}
+
+/*# sourceMappingURL=myprofile.css.map */

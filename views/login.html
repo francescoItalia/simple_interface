@@ -1,0 +1,22 @@
+<div class="content__container">
+    <header>
+        <h1>{body.h1}</h1>
+    </header>
+    <main>
+        <form action="{form.action}" id="{form.id}" method="POST">
+            <label for="email">Email</label>
+            <input name="email" type="email" placeholder="Type your Email" data-validate="Email is required" required>
+            <span class="form__borderEffect"></span>
+            <label for="password">Password</label>
+            <input name="password" type="password" placeholder="Type your password" data-validate="Password is required" required>
+            <span class="form__borderEffect"></span>
+            <a href="/forgot-password">Forgot your password?</a>
+            <div class="form__buttonContainer">
+                <button type="submit">Login</button>
+            </div>
+        </form>
+        <p>Or Sign Up Using</p>
+        <a href="signup">Sign Up</a>
+    </main>
+</div>
+<script src={body.script}></script>

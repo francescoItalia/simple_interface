@@ -1,0 +1,6 @@
+{
+    "head.title": "Homepage | Site",
+    "head.description": "Description | Site",
+    "head.styles": "../assets/css/home.css",
+    "body.h1": "Welcome To Simple Interface"
+}

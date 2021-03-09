@@ -1,0 +1,63 @@
+/*******************
+* GLOBAL Styles
+*******************/
+/*** Content Model Fix ***/
+* {
+  box-sizing: border-box;
+}
+*:before, *:after {
+  box-sizing: inherit;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+  color: #333333;
+  /* Set sizing so that 1rem = 10px */
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  overflow: auto;
+}
+
+a {
+  text-decoration: none;
+  color: #b6b6b6;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+nav {
+  height: max-content;
+}
+
+.logo_container {
+  width: 20%;
+  min-width: 15rem;
+  max-width: 25rem;
+  padding: 2rem;
+}
+
+.logo_container img {
+  width: 100%;
+}
+
+/*** BODY ***/
+body {
+  min-height: 100vh;
+  background: url(../images/background.jpg) no-repeat center/cover;
+  margin: 0;
+  overflow: auto;
+}
+
+.content__container {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin: 4rem auto 8rem;
+  width: 85%;
+  max-width: 600px;
+  border-radius: 20px;
+}
+
+/*# sourceMappingURL=main.css.map */

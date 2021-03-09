@@ -1,0 +1,9 @@
+{
+    "head.title": "Sign Up | Site",
+    "head.description": "Description | Site",
+    "head.styles": "../assets/css/home.css",
+    "body.h1": "Sign up",
+    "body.script": "../assets/js/form.js",
+    "form.id": "signup",
+    "form.action": "../user/signup"
+}

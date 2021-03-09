@@ -1,0 +1,41 @@
+<div class="content__container">
+    <header>
+        <h1>{body.h1}</h1>
+    </header>
+    <main>
+        <form action="{form.action}" id="{form.id}" method="POST">
+            <label for="name">Name*</label>
+            <input name="name" type="text" placeholder="Type your Name" data-validate="Name is required" required>
+            <span class="form__borderEffect"></span>
+            <label for="surname">Surname*</label>
+            <input name="surname" type="text" placeholder="Type your Surname" data-validate="Surname is required" required>
+            <span class="form__borderEffect"></span>
+            <label for="email">Email*</label>
+            <input name="email" type="email" placeholder="Type your Email" data-validate="Email is required" required>
+            <span class="form__borderEffect"></span>
+            <label for="password">Password*</label>
+            <input name="password" type="password" placeholder="Type your password" data-validate="Password is required" required id="psw" pattern="^^(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[a-zA-Z])[a-zA-Z0-9!@#$%^&*]{7,15}$">
+            <span class="form__borderEffect"></span>
+            <div class="form__passwordHelper">
+                <h3>Password must contain the following:</h3>
+                <p id="letter" class="invalid">At least a <b>letter</b></p>
+                <p id="special" class="invalid">At least a <b>Special Character</b></p>
+                <p id="number" class="invalid">At least a <b>number</b></p>
+                <p id="length" class="invalid">Between <b>7 and 15 characters</b></p>
+            </div>
+            <label for="password">Confirm Password*</label>
+            <input type="password" placeholder="Confirm your password" data-validate="Password is required" required id="psw__confirm">
+            <div class="form__confirmPasswordHelper">
+                <h3>Password must contain the following:</h3>
+                <p id="match" class="invalid">Must match password above</p>
+            </div>
+            <span class="form__borderEffect"></span>
+            <div class="form__buttonContainer">
+                <button type="submit">Sign Up</button>
+            </div>
+        </form>
+        <p>Or Login Using</p>
+        <a href="/login">Login</a>
+    </main>
+</div>
+<script src={body.script}></script>
