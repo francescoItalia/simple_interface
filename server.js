@@ -93,6 +93,10 @@ class Server {
           res.setHeader('Content-Type', 'image/png');
           stringPayload = typeof payload !== 'undefined' ? payload : '';
         }
+        if (contentType === 'ico') {
+          res.setHeader('Content-Type', 'x-icon');
+          stringPayload = typeof payload !== 'undefined' ? payload : '';
+        }
         // Return the global response parts
         res.writeHead(statusCode, headersObj);
         res.end(stringPayload);

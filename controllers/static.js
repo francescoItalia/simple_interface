@@ -38,7 +38,7 @@ staticController.signup = (reqData, callback) => {
         // Check that the user is logged in
         if (reqData.user) {
             // If User is logged in, redirect him to my-profile page
-            callback(301, undefined, undefined, {
+            callback(302, undefined, undefined, {
                 Location: `${config.domain}/my-profile`
             })
         } else {
@@ -59,7 +59,7 @@ staticController.login = (reqData, callback) => {
         // Check that the user is logged in
         if (reqData.user) {
             // If User is logged in, redirect him to my-profile page
-            callback(301, undefined, undefined, {
+            callback(302, undefined, undefined, {
                 Location: `${config.domain}/my-profile`
             })
         } else {
@@ -80,7 +80,7 @@ staticController.forgotPassword = (reqData, callback) => {
         // Check that the user is logged in
         if (reqData.user) {
             // If User is logged in, redirect him to my-profile page
-            callback(301, undefined, undefined, {
+            callback(302, undefined, undefined, {
                 Location: `${config.domain}/my-profile`
             })
         } else {
@@ -101,7 +101,7 @@ staticController.resetPassword = (reqData, callback) => {
         // Check that the user is logged in
         if (reqData.user) {
             // If User is logged in, redirect him to my-profile page
-            callback(301, undefined, undefined, {
+            callback(302, undefined, undefined, {
                 Location: `${config.domain}/my-profile`
             })
         } else {

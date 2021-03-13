@@ -21,7 +21,7 @@ profileController.profile = (reqData, callback) => {
                 else callback(errStatusCode, undefined, 'html')
             })
         } else {
-            callback(301, undefined, undefined, {
+            callback(302, undefined, undefined, {
                 Location: `${config.domain}/login`
             });
         }
